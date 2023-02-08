@@ -1,0 +1,158 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #D8CCC2;
+    color: #2B1E16;
+    height: 100%;
+    font-family: 'NanumSquare';
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+body.dark {
+    background-color: #2B1E16;
+    color: #D8CCC2;
+}
+
+::-webkit-scrollbar {
+    overflow-clip-margin: 2rem;
+    display: block;
+    overflow: auto;
+    width: .5rem;
+    height: .5rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+::-webkit-scrollbar-corner, ::-webkit-scrollbar-track {
+    opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9A8C82;
+    border-radius: .2rem;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+    background-color: #7A6A61;
+}
+
+/*====== input start ======*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body input {
+    color: #2B1E16;
+    background-color: #F8EDE3;
+    padding: .5rem .625rem;
+    outline-width: 0px;
+    border-width: 1px;
+    border-color: #AD9F95;
+    border-radius: 0.25rem;
+    display: block;
+    width: 100%;
+}
+
+input:focus {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+body.dark input {
+    color: #F8EDE3;
+    background-color: #9A8C82;
+    border-color: #5B4A41;
+}
+
+body.dark input::placeholder {
+    color: #9A8C82;
+}
+
+.input-group {
+    width: 100%;
+    position: relative;
+}
+
+.input-group label {
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    left: .75rem;
+    top: .5rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.input-group input:focus + label {
+    left: .5rem;
+    top: -.75rem;
+}
+
+.input-group input:required + label::after {
+    content: "*";
+    color: #DC0000;
+}
+
+.input-group input:not(:placeholder-shown) + label {
+    left: .5rem;
+    top: -.75rem;
+}
+
+/*====== input end ======*/
+
+/*====== button start ======*/
+body button, body input[type=submit] {
+    width: 100%;
+    padding: .5rem .625rem;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    color: #FCF4ED;
+    font-weight: 500;
+    background-color: #4B3328 !important;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    cursor: pointer;
+}
+
+button:hover, input[type=submit]:hover {
+    background-color: #7A6A61 !important;
+}
+
+body.dark button:hover, input[type=submit]:hover {
+    background-color: #5B4A41 !important;
+}
+
+/*====== button end ======*/
+
+/*====== swal2 start ======*/
+
+body.swal2-height-auto.swal2-shown {
+    height: 100% !important;
+}
+
+.swal2-container .swal2-popup {
+    background-color: #D8CCC2;
+    color: #2B1E16;
+}
+
+body.dark .swal2-container .swal2-popup {
+    background-color: #5B4A41;
+    color: #D8CCC2;
+}
+
+.swal2-html-container {
+    user-select: none;
+}
+
+/*====== swal2 end ======*/
